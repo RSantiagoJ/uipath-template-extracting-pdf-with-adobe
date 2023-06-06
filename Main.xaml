@@ -92,7 +92,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="642,133" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="Acrobat.exe" />
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process to Reset Adobe Reader State" sap:VirtualizedContainerService.HintSize="642,133" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="Acrobat.exe" />
     <Assign DisplayName="Assign - Folder Path" sap:VirtualizedContainerService.HintSize="642,82" sap2010:WorkflowViewState.IdRef="Assign_10">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[FolderPath]</OutArgument>
@@ -127,7 +127,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Processing File: &quot; + CurrentFile.Name]" />
-            <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" sap2010:Annotation.AnnotationText="Stages a pdf file in the systems default pdf reader(Adobe), so that when we call the use application activity, th file is loaded." DisplayName="Start Process - Open Pdf file in browser" FileName="[currentFile.fullname]" sap:VirtualizedContainerService.HintSize="546,88" sap2010:WorkflowViewState.IdRef="StartProcess_3">
+            <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" sap2010:Annotation.AnnotationText="Stages a pdf file in the systems default pdf reader(Adobe), so that when we call the use application activity, th file is loaded." DisplayName="Start Process - Open Pdf file" FileName="[currentFile.fullname]" sap:VirtualizedContainerService.HintSize="546,88" sap2010:WorkflowViewState.IdRef="StartProcess_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
