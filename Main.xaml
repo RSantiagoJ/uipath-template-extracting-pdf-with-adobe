@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1393,5404" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1393,4089" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="39">
       <x:String>System.Activities</x:String>
@@ -81,7 +81,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Build Datatable with 3 columns Invoice number, Invoice Date and Invoice Total&#xA;For each invoices in a folder, &#xA;   Open in Adobe Acrobat&#xA;   Extracts Invoice number, Invoice Date and Invoice Total using GetText&#xA;   Substring to obtain exact value&#xA;   Added to Datatable&#xA;Data table is written to an excel file" DisplayName="Extracting data from Multiple PDFs" sap:VirtualizedContainerService.HintSize="740,5339" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Build Datatable with 3 columns Invoice number, Invoice Date and Invoice Total&#xA;For each invoices in a folder, &#xA;   Open in Adobe Acrobat&#xA;   Extracts Invoice number, Invoice Date and Invoice Total using GetText&#xA;   Substring to obtain exact value&#xA;   Added to Datatable&#xA;Data table is written to an excel file" DisplayName="Extracting data from Multiple PDFs" sap:VirtualizedContainerService.HintSize="704,4024" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_InvoiceDetails" />
       <Variable x:TypeArguments="x:String" Name="FolderPath" />
@@ -89,10 +89,10 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Assign - Folder Path" sap:VirtualizedContainerService.HintSize="678,82" sap2010:WorkflowViewState.IdRef="Assign_10">
+    <Assign DisplayName="Assign - Folder Path" sap:VirtualizedContainerService.HintSize="642,82" sap2010:WorkflowViewState.IdRef="Assign_10">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[FolderPath]</OutArgument>
       </Assign.To>
@@ -100,14 +100,14 @@
         <InArgument x:TypeArguments="x:String">["C:\Users\" + Environment.UserName + "\Downloads\Extracting from PDF\Files"]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:BuildDataTable sap2010:Annotation.AnnotationText="Create datatable structure with Columns Invoice Number, Invoice Date and Invoice Total" DataTable="[dt_InvoiceDetails]" DisplayName="Build Data Table - Invoice Details" sap:VirtualizedContainerService.HintSize="678,102" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Total&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+    <ui:BuildDataTable sap2010:Annotation.AnnotationText="Create datatable structure with Columns Invoice Number, Invoice Date and Invoice Total" DataTable="[dt_InvoiceDetails]" DisplayName="Build Data Table - Invoice Details" sap:VirtualizedContainerService.HintSize="642,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Total&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BuildDataTable>
-    <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="[FolderPath]" sap:VirtualizedContainerService.HintSize="678,3704" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst">
+    <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="[FolderPath]" sap:VirtualizedContainerService.HintSize="642,3362" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst">
       <ui:ForEachFileX.Body>
         <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
           <ActivityAction.Argument1>
@@ -116,7 +116,7 @@
           <ActivityAction.Argument2>
             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
           </ActivityAction.Argument2>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="644,3474" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,3132" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="fileName" />
             </Sequence.Variables>
@@ -125,15 +125,15 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="582,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Processing File: &quot; + CurrentFile.Name]" />
-            <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" sap2010:Annotation.AnnotationText="Opens PDF file in Microsoft Edge browser" DisplayName="Start Process - Open Pdf file in browser" FileName="[currentFile.fullname]" sap:VirtualizedContainerService.HintSize="582,119" sap2010:WorkflowViewState.IdRef="StartProcess_3">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Processing File: &quot; + CurrentFile.Name]" />
+            <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" sap2010:Annotation.AnnotationText="Opens PDF file in Microsoft Edge browser" DisplayName="Start Process - Open Pdf file in browser" FileName="[currentFile.fullname]" sap:VirtualizedContainerService.HintSize="546,88" sap2010:WorkflowViewState.IdRef="StartProcess_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:StartProcess>
-            <Assign sap2010:Annotation.AnnotationText="Creating File URL from FileName" DisplayName="Assign - FileName format" sap:VirtualizedContainerService.HintSize="582,113" sap2010:WorkflowViewState.IdRef="Assign_11">
+            <Assign sap2010:Annotation.AnnotationText="Creating File URL from FileName" DisplayName="Assign - FileName format" sap:VirtualizedContainerService.HintSize="546,82" sap2010:WorkflowViewState.IdRef="Assign_11">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[fileName]</OutArgument>
               </Assign.To>
@@ -142,17 +142,17 @@
               </Assign.Value>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Invoice-722018.pdf - Adobe Acrobat Reader (64-bit)" sap:VirtualizedContainerService.HintSize="582,2919" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" OpenMode="Never" ScopeGuid="d95e9ed3-d03a-43c4-aff3-430d818ac2f5" Version="V1" WindowResize="Maximize">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Invoice-722018.pdf - Adobe Acrobat Reader (64-bit)" sap:VirtualizedContainerService.HintSize="546,2639" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" OpenMode="Never" ScopeGuid="d95e9ed3-d03a-43c4-aff3-430d818ac2f5" Version="V1" WindowResize="Maximize">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="548,2629" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,2349" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="TotalValue" />
                       <Variable x:TypeArguments="x:String" Name="InvoiceNumber" />
@@ -166,10 +166,11 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence sap:VirtualizedContainerService.HintSize="486,688" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <Sequence sap2010:Annotation.AnnotationText="Sets the accessibility setting for each file being oped, without this step, pdf element detection and tagging will not work." DisplayName="Set Adobe Reader Accessibility Setting  for the opened file" sap:VirtualizedContainerService.HintSize="450,730" sap2010:WorkflowViewState.IdRef="Sequence_18">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <uix:NClick ClickType="Single" DisplayName="Click 'AVPageView'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
@@ -184,7 +185,7 @@
                         </uix:NClick.Target>
                       </uix:NClick>
                     </Sequence>
-                    <uix:NGetText DisplayName="Get Text 'Invoice No.'" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="d95e9ed3-d03a-43c4-aff3-430d818ac2f5" Version="V1">
+                    <uix:NGetText DisplayName="Get Text 'Invoice No.'" sap:VirtualizedContainerService.HintSize="450,157" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="d95e9ed3-d03a-43c4-aff3-430d818ac2f5" Version="V1">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="778, 201, 687, 37" ElementType="InputBox" FriendlyName="'Invoice No.'" FullSelectorArgument="&lt;uia cls='AVL_AVView' idx='4' /&gt;&lt;uia cls='AVL_AVView' idx='11' /&gt;&lt;uia role='edit' /&gt;" FuzzySelectorArgument="&lt;uia cls='AVL_AVView' /&gt;&lt;uia cls='AVL_AVView' /&gt;&lt;uia role='edit' automationid='' /&gt;" Guid="c65ae2c6-b484-443e-8f29-86a08ca2f118" ImageBase64="" InformativeScreenshot="020d0f9780cc0bd3a306d217c3f333c6.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Invoice-*.pdf - Adobe Acrobat Reader (64-bit)' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="UIA">
                           <uix:TargetAnchorable.Anchors>
@@ -198,7 +199,7 @@
                         <OutArgument x:TypeArguments="x:String">[InvoiceNumberLine]</OutArgument>
                       </uix:NGetText.Text>
                     </uix:NGetText>
-                    <uix:NGetText DisplayName="Get Text 'Date: 0000-00-00'" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="d95e9ed3-d03a-43c4-aff3-430d818ac2f5" Version="V1">
+                    <uix:NGetText DisplayName="Get Text 'Date: 0000-00-00'" sap:VirtualizedContainerService.HintSize="450,157" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="d95e9ed3-d03a-43c4-aff3-430d818ac2f5" Version="V1">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="778, 238, 217, 51" ElementType="InputBox" FriendlyName="'Date: 0000-00-00'" FullSelectorArgument="&lt;uia cls='AVL_AVView' idx='4' /&gt;&lt;uia cls='AVL_AVView' idx='11' /&gt;&lt;uia idx='3' role='edit' /&gt;" FuzzySelectorArgument="&lt;uia cls='AVL_AVView' /&gt;&lt;uia cls='AVL_AVView' /&gt;&lt;uia automationid='' role='edit' /&gt;" Guid="de93b8a1-0771-4c43-b039-f30466cf3ea5" ImageBase64="" InformativeScreenshot="f49011da5eac177d5be1be57bef33377.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Invoice-*.pdf - Adobe Acrobat Reader (64-bit)' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="UIA">
                           <uix:TargetAnchorable.Anchors>
@@ -212,7 +213,7 @@
                         <OutArgument x:TypeArguments="x:String">[InvoiceNumber_Date]</OutArgument>
                       </uix:NGetText.Text>
                     </uix:NGetText>
-                    <uix:NGetText DisplayName="Get Text - Invoice Total" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="d95e9ed3-d03a-43c4-aff3-430d818ac2f5" Version="V1">
+                    <uix:NGetText DisplayName="Get Text - Invoice Total" sap:VirtualizedContainerService.HintSize="450,157" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="d95e9ed3-d03a-43c4-aff3-430d818ac2f5" Version="V1">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="1363, 1055, 187, 116" ElementType="InputBox" FriendlyName="'Subtotal: 177967'" FullSelectorArgument="&lt;uia cls='AVL_AVView' idx='4' /&gt;&lt;uia cls='AVL_AVView' idx='11' /&gt;&lt;uia idx='5' role='edit' /&gt;" FuzzySelectorArgument="&lt;uia cls='AVL_AVView' /&gt;&lt;uia cls='AVL_AVView' /&gt;&lt;uia automationid='' role='edit' /&gt;" Guid="cd058d68-f78d-4601-a64d-ce8f39ed76f7" InformativeScreenshot="fd20e2b3bfd2db6349a2fd001b3ff835.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Invoice-722018.pdf - Adobe Acrobat Reader (64-bit)' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="UIA" />
                       </uix:NGetText.Target>
@@ -226,26 +227,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,282" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-                      <ui:CommentOut.Body>
-                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,203" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[InvoiceNumberLine + &quot;, &quot; +InvoiceNumber_Date + &quot;, &quot; + TotalValue]">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </ui:LogMessage>
-                        </Sequence>
-                      </ui:CommentOut.Body>
-                    </ui:CommentOut>
-                    <Assign DisplayName="Assign - Extract Invoice Number" sap:VirtualizedContainerService.HintSize="486,82" sap2010:WorkflowViewState.IdRef="Assign_9">
+                    <Assign DisplayName="Assign - Extract Invoice Number" sap:VirtualizedContainerService.HintSize="450,82" sap2010:WorkflowViewState.IdRef="Assign_9">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[InvoiceNumber]</OutArgument>
                       </Assign.To>
@@ -253,7 +235,7 @@
                         <InArgument x:TypeArguments="x:String">[InvoiceNumberLine.Split({“Invoice No.”},StringSplitOptions.None)(1).Trim.Split({“ ”},StringSplitOptions.None)(0)]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign DisplayName="Assign - Extract Date" sap:VirtualizedContainerService.HintSize="486,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign DisplayName="Assign - Extract Date" sap:VirtualizedContainerService.HintSize="450,82" sap2010:WorkflowViewState.IdRef="Assign_7">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[InvoiceDate]</OutArgument>
                       </Assign.To>
@@ -261,7 +243,7 @@
                         <InArgument x:TypeArguments="x:String">[InvoiceNumber_date.Split({“Date:”},StringSplitOptions.None)(1).Trim.Split({“ ”},StringSplitOptions.None)(0)]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign DisplayName="Assign - Extract Total" sap:VirtualizedContainerService.HintSize="486,82" sap2010:WorkflowViewState.IdRef="Assign_8">
+                    <Assign DisplayName="Assign - Extract Total" sap:VirtualizedContainerService.HintSize="450,82" sap2010:WorkflowViewState.IdRef="Assign_8">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[TotalValue]</OutArgument>
                       </Assign.To>
@@ -269,7 +251,7 @@
                         <InArgument x:TypeArguments="x:String">[String.Join(" ", TotalValue.Split(" "c).Skip(1))]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{InvoiceNumber,InvoiceDate,TotalValue}]" DataTable="[dt_InvoiceDetails]" DisplayName="Add Data Row - Invoice Details to Datatable" sap:VirtualizedContainerService.HintSize="486,186" sap2010:WorkflowViewState.IdRef="AddDataRow_3">
+                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{InvoiceNumber,InvoiceDate,TotalValue}]" DataTable="[dt_InvoiceDetails]" DisplayName="Add Data Row - Invoice Details to Datatable" sap:VirtualizedContainerService.HintSize="450,186" sap2010:WorkflowViewState.IdRef="AddDataRow_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -277,8 +259,8 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:AddDataRow>
-                    <WriteLine DisplayName="Write Line - Invoice Details" sap:VirtualizedContainerService.HintSize="486,62" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Invoice Number: &quot; +  InvoiceNumber +  Environment.NewLine + &quot;Invoice Date: &quot; + InvoiceDate +  Environment.NewLine + &quot;Total value: &quot; + TotalValue]" />
-                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="486,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" Shortcuts="[d(hk)][d(ctrl)][k(f4)][u(ctrl)][u(hk)]" />
+                    <WriteLine DisplayName="Write Line - Invoice Details" sap:VirtualizedContainerService.HintSize="450,62" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Invoice Number: &quot; +  InvoiceNumber +  Environment.NewLine + &quot;Invoice Date: &quot; + InvoiceDate +  Environment.NewLine + &quot;Total value: &quot; + TotalValue]" />
+                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Close Tab in Adobe Reader" sap:VirtualizedContainerService.HintSize="450,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" Shortcuts="[d(hk)][d(ctrl)][k(f4)][u(ctrl)][u(hk)]" />
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
@@ -302,38 +284,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachFileX>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="678,774" sap2010:WorkflowViewState.IdRef="CommentOut_5">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="546,695" sap2010:WorkflowViewState.IdRef="Sequence_22">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Invoice-722018.pdf - Adobe Acrobat Reader (64-bit)" sap:VirtualizedContainerService.HintSize="484,584" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" ScopeGuid="748990e5-3ac2-4932-a1d5-9284bcb72491" Version="V1">
-            <uix:NApplicationCard.Body>
-              <ActivityAction x:TypeArguments="x:Object">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,294" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="388,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_7" Shortcuts="[d(hk)][d(ctrl)]q[u(ctrl)][u(hk)]" />
-                </Sequence>
-              </ActivityAction>
-            </uix:NApplicationCard.Body>
-            <uix:NApplicationCard.TargetApp>
-              <uix:TargetApp Area="0, 0, 0, 0" FilePath="C:\Program Files\Adobe\Acrobat DC\Acrobat\acrobat.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJPSURBVFhH1ZY9aBRBFMevUVCUKIliOPHjEPzIkTRiOAWxSBobLawU7MQ2aBdFBBHkIHiFVjYhcGijyNkIKS5dIHCQSs6rQgq90mZvd7Z5vv9bNu7ODHGyN5xY/Jh9b96895+Zt8uWiOifYjjisdIRZo2hIdhiFvTcNgwHL1yLz45vD1a/UhAEe+fnD4oWH/2KJ/YFkos3pNfIYjh4AYUfP9iT74HBxjrFE/sHnG9zNxGGAwJsCYvgIsJw+BQA/iYiZwBXAdHrV0nDTR6k4HvXGpOSiJCeeK7XyxnAVYCaqVD4fkVERIuPrTFZwjdL2xy7pdfLGcBVQDx1SkZ15RKp+3eMeQN+O5Bbr5czgPMJzNcobNQlKU7CFqPjVUD47i3FJw6QOnfcOm/DqwA0HmJdmjDFqwA0nrp7m9TVaVK35qwxOl4FqDPjcvdhe5Xi8iFS5yelMePyYSmk5rhHvnzKrfEiIHr5TJLL/d+8TqpyLCl48eSfq+BRTma6kls7lAB8eNTpo0nR2SlS12bkGvAm4BSihYeJKBRm0BvqxuVcjsIC5K65MHYWvXiadL6t8TCP3nhwTwTr84UFwBc94cT8wcEzXkE9xoXCAnAC8GPntp25UliAL/5/AdVqVajX6zt2rVajVqtlzNnwIqDf78uY2r1eT0Skvt3wIgAFswLSMQWnkV2TxYsA7LbZbO7YnU5ntCeg2yjebrdHI2BYnAXgJ9KWYBjkx9RRwGd1odwddL9ZExUBuZCTcy/r9XJGCgc2oNYzDVstwzFqrM7RQaXfNljUiwb3UnIAAAAASUVORK5CYII=" InformativeScreenshot="74ab77f09039566f44312118b0467530.png" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Invoice-722018.pdf - Adobe Acrobat Reader (64-bit)'/&gt;" />
-            </uix:NApplicationCard.TargetApp>
-          </uix:NApplicationCard>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="678,133" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="Acrobat.exe" />
-    <ui:WriteRange AddHeaders="True" DataTable="[dt_InvoiceDetails]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="678,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Invoice Details.xlsx" />
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="642,133" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="Acrobat.exe" />
+    <ui:WriteRange AddHeaders="True" DataTable="[dt_InvoiceDetails]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="642,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Invoice Details.xlsx" />
   </Sequence>
 </Activity>
